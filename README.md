@@ -2,9 +2,9 @@
 
 main-host app of
 
-main-host/
-app-a-remote/
-app-b-remote/
-app-c-remote/
-platform-contracts/
-platform-ui-shoelace/
+- main-host/
+- app-a-remote/
+- app-b-remote/
+- app-c-remote/
+- platform-contracts/
+- platform-ui-shoelace/
