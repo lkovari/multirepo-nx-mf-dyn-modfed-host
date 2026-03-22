@@ -1,0 +1,9 @@
+{
+  "name": "nxdmfmf-main-host-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/nxdmfmf-main-host-e2e/src",
+  "implicitDependencies": ["nxdmfmf-main-host"],
+  "// targets": "to see all targets run: nx show project nxdmfmf-main-host-e2e --web",
+  "targets": {}
+}

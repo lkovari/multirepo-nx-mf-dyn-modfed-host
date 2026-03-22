@@ -1,0 +1,60 @@
+.c-main-host {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.c-main-host__welcome {
+  width: 100%;
+}
+
+.c-main-host__heading {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  margin: 0 0 0.5rem;
+}
+
+.c-main-host__subheading {
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  margin: 0;
+}
+
+.c-main-host__accent {
+  color: var(--color-accent-purple, #a855f7);
+}
+
+.c-main-host__version {
+  color: var(--color-accent-pink, #ec4899);
+  font-weight: 600;
+}
+
+.c-main-host__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.c-card {
+  background: var(--color-card-bg, #ccfbf1);
+  border-radius: var(--radius-md, 8px);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.c-card__title {
+  font-size: clamp(0.9375rem, 1.5vw, 1rem);
+  margin: 0 0 0.5rem;
+  font-weight: 600;
+}
+
+.c-card__text {
+  font-size: clamp(0.8125rem, 1.2vw, 0.875rem);
+  margin: 0;
+  line-height: 1.5;
+}
+
+.c-card__list {
+  margin: 0;
+  padding-left: 1.25rem;
+  font-size: clamp(0.8125rem, 1.2vw, 0.875rem);
+  line-height: 1.6;
+}

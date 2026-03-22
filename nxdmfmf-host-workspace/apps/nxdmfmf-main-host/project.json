@@ -1,0 +1,94 @@
+{
+  "name": "nxdmfmf-main-host",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "app",
+  "sourceRoot": "apps/nxdmfmf-main-host/src",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/nxdmfmf-main-host",
+        "index": "apps/nxdmfmf-main-host/src/index.html",
+        "main": "apps/nxdmfmf-main-host/src/main.ts",
+        "tsConfig": "apps/nxdmfmf-main-host/tsconfig.app.json",
+        "inlineStyleLanguage": "css",
+        "assets": [
+          {
+            "glob": "**/*",
+            "input": "apps/nxdmfmf-main-host/public"
+          }
+        ],
+        "styles": ["apps/nxdmfmf-main-host/src/styles.css"],
+        "customWebpackConfig": {
+          "path": "apps/nxdmfmf-main-host/webpack.config.ts"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "4kb",
+              "maximumError": "8kb"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/nxdmfmf-main-host/webpack.prod.config.ts"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "continuous": true,
+      "executor": "@nx/angular:dev-server",
+      "options": {
+        "buildTarget": "nxdmfmf-main-host:build:development",
+        "port": 4200
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "nxdmfmf-main-host:build:production"
+        },
+        "development": {
+          "buildTarget": "nxdmfmf-main-host:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@angular/build:unit-test",
+      "options": {}
+    },
+    "serve-static": {
+      "continuous": true,
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "nxdmfmf-main-host:build",
+        "port": 4200,
+        "staticFilePath": "dist/apps/nxdmfmf-main-host",
+        "spa": true
+      }
+    }
+  }
+}

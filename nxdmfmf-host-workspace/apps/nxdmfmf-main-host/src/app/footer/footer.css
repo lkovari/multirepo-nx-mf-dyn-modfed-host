@@ -1,0 +1,16 @@
+.c-footer {
+  padding: clamp(0.75rem, 2vw, 1.25rem) clamp(1rem, 3vw, 2rem);
+  background: var(--color-header-bg, #1e293b);
+  color: var(--color-header-text, #e2e8f0);
+  text-align: center;
+}
+
+.c-footer__text {
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+  margin: 0;
+}
+
+.c-footer__version {
+  color: var(--color-accent-pink, #ec4899);
+  font-weight: 600;
+}
