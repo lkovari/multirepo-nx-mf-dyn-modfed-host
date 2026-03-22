@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "build": "nx build nxdmfmf-main-host",
     "serve": "nx serve nxdmfmf-main-host",
     "serve-static": "NX_DAEMON=false nx run nxdmfmf-main-host:serve-static",
     "reset": "nx reset"
