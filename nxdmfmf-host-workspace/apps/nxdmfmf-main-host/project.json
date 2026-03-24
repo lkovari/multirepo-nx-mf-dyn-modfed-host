@@ -19,6 +19,10 @@
           {
             "glob": "**/*",
             "input": "apps/nxdmfmf-main-host/public"
+          },
+          {
+            "glob": ".nojekyll",
+            "input": "apps/nxdmfmf-main-host/public"
           }
         ],
         "styles": ["apps/nxdmfmf-main-host/src/styles.css"],

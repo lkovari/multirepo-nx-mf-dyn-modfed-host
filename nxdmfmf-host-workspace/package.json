@@ -6,6 +6,8 @@
     "build": "nx build nxdmfmf-main-host",
     "serve": "nx serve nxdmfmf-main-host",
     "serve-static": "NX_DAEMON=false nx run nxdmfmf-main-host:serve-static",
+    "gh-build": "cp apps/nxdmfmf-main-host/public/module-federation.manifest.json apps/nxdmfmf-main-host/public/module-federation.manifest.json.bak && cp apps/nxdmfmf-main-host/public/module-federation.manifest.production.json apps/nxdmfmf-main-host/public/module-federation.manifest.json && nx build nxdmfmf-main-host --configuration=production --base-href=/multirepo-nx-mf-dyn-modfed-host/ && cp dist/apps/nxdmfmf-main-host/index.html dist/apps/nxdmfmf-main-host/404.html && mv apps/nxdmfmf-main-host/public/module-federation.manifest.json.bak apps/nxdmfmf-main-host/public/module-federation.manifest.json",
+    "gh-deploy": "gh-pages -d dist/apps/nxdmfmf-main-host --dotfiles",
     "reset": "nx reset"
   },
   "private": true,
