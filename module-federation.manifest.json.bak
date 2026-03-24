@@ -1,0 +1,5 @@
+{
+  "nxdmfmf-remote-a": "http://localhost:4201/mf-manifest.json",
+  "nxdmfmf-remote-b": "http://localhost:4202/mf-manifest.json",
+  "nxdmfmf-remote-c": "http://localhost:4203/mf-manifest.json"
+}
