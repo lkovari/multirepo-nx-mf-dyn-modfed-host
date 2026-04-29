@@ -25,7 +25,10 @@
             "input": "apps/nxdmfmf-main-host/public"
           }
         ],
-        "styles": ["apps/nxdmfmf-main-host/src/styles.css"],
+        "styles": [
+          "apps/nxdmfmf-main-host/src/styles.css",
+          "node_modules/primeicons/primeicons.css"
+        ],
         "customWebpackConfig": {
           "path": "apps/nxdmfmf-main-host/webpack.config.ts"
         }
